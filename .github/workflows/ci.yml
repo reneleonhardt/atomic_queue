@@ -11,12 +11,12 @@ jobs:
     strategy:
       matrix:
         toolset: [gcc, clang]
-        os: [ubuntu-22.04, ubuntu-24.04]
+        os: [ubuntu-22.04, ubuntu-24.04, ubuntu-22.04-arm, ubuntu-24.04-arm]
 
     runs-on: ${{ matrix.os }}
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: Install Boost.Test
       run: sudo apt-get --quiet --yes install libboost-test-dev

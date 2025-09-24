@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Install Meson and Boost.Test
         run: sudo apt-get --quiet --yes install meson libboost-test-dev
